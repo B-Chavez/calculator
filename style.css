@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.button{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.button:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#display{
+    background-color: #7fffd4;
+    height: 100px;
+    width: 400px;
+}
+
+.operatorsContainer{
+    display: flex;
+}
+
+.numbersContainer{
+    display: flex;
+    width: 400px;
+    flex-wrap: wrap;
+}
+
+.numbersContainer > div{
+    width: calc(100% / 4);
+}
+
+#zero{
+    
+}
+
+.button:hover{
+    background-color: #57af92;
+}
