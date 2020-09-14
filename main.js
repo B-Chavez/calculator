@@ -31,7 +31,7 @@ one.addEventListener('click', function (){
 })
 
 
-clear.addEventListener('click', function(){ 
+clear.addEventListener('click', function(){
     clearScreen();
     num1 = 0;
     num2 = 0;
@@ -45,7 +45,7 @@ function displayNumbers(number){
 function saveFirstNumber(){
     if(display.textContent){
         num1 = display.textContent;
-        
+
     }
 }
 
@@ -74,4 +74,11 @@ function add(){
         display.textContent = parseInt(num1) + parseInt(num2);
     }
     addBoolean1 = false;
+}
+
+function minus(){
+    if(minusBoolean1 === true){
+        saveFirstNumber();
+        clearScreen();
+    }
 }
