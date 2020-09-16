@@ -29,7 +29,33 @@ plus.addEventListener('click', function(){
 one.addEventListener('click', function (){
     displayNumbers(1)
 })
-
+two.addEventListener('click', function (){
+    displayNumbers(2)
+})
+three.addEventListener('click', function (){
+    displayNumbers(3)
+})
+four.addEventListener('click', function(){
+    displayNumbers(4)
+})
+five.addEventListener('click', function(){
+    displayNumbers(5)
+})
+six.addEventListener('click', function (){
+    displayNumbers(6)
+})
+seven.addEventListener('click', function (){
+    displayNumbers(7)
+})
+eight.addEventListener('click', function (){
+    displayNumbers(8)
+})
+nine.addEventListener('click', function(){
+    displayNumbers(9)
+})
+zero.addEventListener('click', function(){
+    displayNumbers(0)
+})
 
 clear.addEventListener('click', function(){
     clearScreen();
