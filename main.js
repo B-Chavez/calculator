@@ -14,6 +14,7 @@ var nine = document.querySelector("#nine");
 var zero = document.querySelector("#zero");
 var clear = document.querySelector("#clear");
 var equals = document.querySelector("#equals");
+var decimal = document.querySelector("#decimal");
 
 var display = document.querySelector("#display");
 
@@ -51,6 +52,9 @@ nine.addEventListener('click', function(){
 })
 zero.addEventListener('click', function(){
     displayNumbers(0)
+})
+decimal.addEventListener('click', function(){
+    displayNumbers(".")
 })
 
 var equalsVar;
@@ -97,7 +101,7 @@ function saveFirstNumber(){
 
 function saveSecondNumber(){
     if(display.textContent){
-        num2 = display.textContent
+        num2 = display.textContent;
     }
 }
 

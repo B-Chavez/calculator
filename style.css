@@ -44,10 +44,14 @@
     width: calc(100% / 4);
 }
 
-#clear{
+/* #clear{
     width: 400px;
-}
+} */
 
 .button:hover{
     background-color: #57af92;
+}
+
+.hidden{
+    display: none;
 }
