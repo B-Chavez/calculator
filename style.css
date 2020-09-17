@@ -44,8 +44,8 @@
     width: calc(100% / 4);
 }
 
-#zero{
-    
+#clear{
+    width: 400px;
 }
 
 .button:hover{

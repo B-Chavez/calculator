@@ -21,7 +21,6 @@ var num1 = 0;
 var num2 = 0;
 
 var Boolean1 = true;
-var minusBoolean1 = true;
 
 one.addEventListener('click', function (){
     displayNumbers(1)
@@ -112,14 +111,24 @@ function clearButton(){
     Boolean1 = true;
 }
 
+var sum = 0;
+
 function addNums(){
     if(Boolean1 === true){
         saveFirstNumber();
         clearScreen();
     }
     if(Boolean1 === false){
-        saveSecondNumber();
-        display.textContent = parseInt(num1) + parseInt(num2);
+        if(!sum){
+            saveSecondNumber();
+            display.textContent = parseInt(num1) + parseInt(num2);
+            sum = parseInt(num1) + parseInt(num2);
+            console.log("bang")
+        } else if(sum){
+            display.textContent = parseInt(display.textContent) + parseInt(display.textContent);
+            console.log("notBang")
+        }
+        
     }
     Boolean1 = false;
 }
