@@ -20,11 +20,8 @@ var display = document.querySelector("#display");
 var num1 = 0;
 var num2 = 0;
 
-var addBoolean1 = true;
-
-plus.addEventListener('click', function(){
-    add()
-})
+var Boolean1 = true;
+var minusBoolean1 = true;
 
 one.addEventListener('click', function (){
     displayNumbers(1)
@@ -57,11 +54,35 @@ zero.addEventListener('click', function(){
     displayNumbers(0)
 })
 
+var equalsVar;
+
+plus.addEventListener('click', function(){
+    addNums()
+    equalsVar = "+";
+})
+
+minus.addEventListener('click', function(){
+    minusNums()
+    equalsVar = "-";
+})
+
+multiply.addEventListener('click', function(){
+    multiplyNums()
+    equalsVar = "*";
+})
+
+divide.addEventListener('click', function(){
+    divideNums()
+    equalsVar = "/";
+})
+
+equals.addEventListener('click', function(){
+    equalsNums()
+})
+
 clear.addEventListener('click', function(){
     clearScreen();
-    num1 = 0;
-    num2 = 0;
-    addBoolean1 = true;
+    clearButton();
 })
 
 function displayNumbers(number){
@@ -85,26 +106,70 @@ function clearScreen(){
     display.textContent = "";
 }
 
-// if(num1){
-//     then clear display
-//     set some variable to true that will run inside a function
-// }
+function clearButton(){
+    num1 = 0;
+    num2 = 0;
+    Boolean1 = true;
+}
 
-function add(){
-    if(addBoolean1 === true){
+function addNums(){
+    if(Boolean1 === true){
         saveFirstNumber();
         clearScreen();
     }
-    if(addBoolean1 === false){
+    if(Boolean1 === false){
         saveSecondNumber();
         display.textContent = parseInt(num1) + parseInt(num2);
     }
-    addBoolean1 = false;
+    Boolean1 = false;
 }
 
-function minus(){
-    if(minusBoolean1 === true){
+function minusNums(){
+    if(Boolean1 === true){
         saveFirstNumber();
         clearScreen();
+    }
+    if(Boolean1 === false){
+        saveSecondNumber();
+        display.textContent = parseInt(num1) - parseInt(num2);
+    }
+    Boolean1 = false;
+}
+
+function multiplyNums(){
+    if(Boolean1 === true){
+        saveFirstNumber();
+        clearScreen();
+    }
+    if(Boolean1 === false){
+        saveSecondNumber();
+        display.textContent = parseInt(num1) * parseInt(num2);
+    }
+    Boolean1 = false;
+}
+
+function divideNums(){
+    if(Boolean1 === true){
+        saveFirstNumber();
+        clearScreen();
+    }
+    if(Boolean1 === false){
+        saveSecondNumber();
+        display.textContent = parseInt(num1) / parseInt(num2);
+    }
+    Boolean1 = false;
+}
+
+function equalsNums(){
+    if(equalsVar === "+"){
+        addNums()
+    } else if(equalsVar === "-"){
+        minusNums()
+    } else if(equalsVar === "*"){
+        multiplyNums()
+    } else if(equalsVar === "/"){
+        divideNums()
+    } else{
+        display.textContent = "Invalid"
     }
 }
