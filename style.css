@@ -24,6 +24,10 @@
     background-color: #7fffd4;
     height: 100px;
     width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
 }
 
 .operatorsContainer{
